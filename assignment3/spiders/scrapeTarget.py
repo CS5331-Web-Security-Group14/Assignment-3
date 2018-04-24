@@ -12,10 +12,17 @@ import logging
 class ScrapeTarget(CrawlSpider):
 	name = "scrapeTarget"
 	start_urls = [
-		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/'
+		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080',
+		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081',
+		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082',
+		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8083'
 	]
 	allowed_domains =[
-		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com', ''
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com', '',
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080',
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081',
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082',
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8083'
 	]
 	injection_points = {}
 	logging.basicConfig(filename='scanner_logs.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
@@ -23,6 +30,7 @@ class ScrapeTarget(CrawlSpider):
 	
 	def parse(self, response):
 		#extract forms on the page
+		#print response.css('body')
 		forms = response.css('form')
 		parsedResponseURL = urlparse.urlparse(response.url)
 		urlKey = parsedResponseURL.scheme+"://"+ parsedResponseURL.netloc
@@ -52,13 +60,14 @@ class ScrapeTarget(CrawlSpider):
 		links = response.css('a::attr(href)').extract()
 		for link in links:
 			parsedUrl = urlparse.urlparse(link)
+			getJson = {'endpoint': urlparse.urljoin(parsedResponseURL.path,parsedUrl.path)}
 			if parsedUrl.netloc in self.allowed_domains:
 				if parsedUrl.query != '':
 					getJson = {'method' : 'GET', 'params': [], 'endpoint': urlparse.urljoin(parsedResponseURL.path,parsedUrl.path)}
 					for key in urlparse.parse_qs(parsedUrl.query):
 						getJson['params'].append({'name':key})
-					if getJson not in self.injection_points[urlKey]:
-						self.injection_points[urlKey].append(getJson)
+				if getJson not in self.injection_points[urlKey]:
+					self.injection_points[urlKey].append(getJson)
 				yield scrapy.http.Request(url=response.urljoin(link), callback=self.parse)
 				
 			

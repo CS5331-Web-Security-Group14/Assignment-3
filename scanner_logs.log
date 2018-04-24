@@ -1,0 +1,145 @@
+2018-04-24 21:37:49,796 Starting Phase 1: Crawling
+
+2018-04-24 21:37:49,798 Scrapy 1.5.0 started (bot: assignment3)
+2018-04-24 21:37:49,832 Versions: lxml 4.2.1.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 2.7.12 (default, Dec  4 2017, 14:50:18) - [GCC 5.4.0 20160609], pyOpenSSL 17.5.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Linux-4.13.0-38-generic-x86_64-with-Ubuntu-16.04-xenial
+2018-04-24 21:37:49,875 Overridden settings: {'NEWSPIDER_MODULE': 'assignment3.spiders', 'SPIDER_MODULES': ['assignment3.spiders'], 'ROBOTSTXT_OBEY': True, 'DOWNLOAD_DELAY': 1, 'BOT_NAME': 'assignment3'}
+2018-04-24 21:37:50,269 Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-04-24 21:37:50,534 Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-24 21:37:50,544 Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-24 21:37:50,547 Enabled item pipelines:
+[]
+2018-04-24 21:37:50,547 Spider opened
+2018-04-24 21:37:50,628 Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-24 21:37:50,629 Opening scrapeTarget spider
+2018-04-24 21:37:50,637 Telnet console listening on 127.0.0.1:6023
+2018-04-24 21:37:50,706 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/robots.txt> (referer: None)
+2018-04-24 21:37:51,681 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/robots.txt> (referer: None)
+2018-04-24 21:37:52,730 Crawled (404) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082/robots.txt> (referer: None)
+2018-04-24 21:37:54,151 Crawled (404) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8083/robots.txt> (referer: None)
+2018-04-24 21:37:55,296 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080> (referer: None)
+2018-04-24 21:37:56,813 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081> (referer: None)
+2018-04-24 21:37:58,129 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082> (referer: None)
+2018-04-24 21:37:59,171 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8083> (referer: None)
+2018-04-24 21:38:00,541 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080)
+2018-04-24 21:38:00,647 Filtered duplicate request: <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/> - no more duplicates will be shown (see DUPEFILTER_DEBUG to show all duplicates)
+2018-04-24 21:38:01,425 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/adventure/> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080)
+2018-04-24 21:38:02,077 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/random.php> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080)
+2018-04-24 21:38:03,429 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080)
+2018-04-24 21:38:04,225 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/about.php> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080)
+2018-04-24 21:38:05,184 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/index.txt> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081)
+2018-04-24 21:38:06,469 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?artist=Slowdive> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:07,590 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?artist=Mazzy%20Star> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:08,449 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?year=2017> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:09,924 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?year=2016> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:10,849 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?year=1993> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:12,274 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php?artist=Nicole%20Dollanganger> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/selections.php)
+2018-04-24 21:38:13,662 Crawled (200) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/secretclub.php> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/index.txt)
+2018-04-24 21:38:14,671 Crawled (403) <GET http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/index.phps> (referer: http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/index.txt)
+2018-04-24 21:38:14,777 Ignoring response <403 http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081/index.phps>: HTTP status code is not handled or not allowed
+2018-04-24 21:38:14,784 Closing spider (finished)
+2018-04-24 21:38:14,793 
+
+Crawling completed. Generating endpoints file
+2018-04-24 21:38:14,794 
+
+Phase 1: Crawling completed
+
+---------------------
+
+
+2018-04-24 21:38:14,796 Dumping Scrapy stats:
+{'downloader/request_bytes': 7463,
+ 'downloader/request_count': 22,
+ 'downloader/request_method_count/GET': 22,
+ 'downloader/response_bytes': 13320,
+ 'downloader/response_count': 22,
+ 'downloader/response_status_count/200': 19,
+ 'downloader/response_status_count/403': 1,
+ 'downloader/response_status_count/404': 2,
+ 'dupefilter/filtered': 86,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 24, 13, 38, 14, 793752),
+ 'httperror/response_ignored_count': 1,
+ 'httperror/response_ignored_status_count/403': 1,
+ 'log_count/DEBUG': 24,
+ 'log_count/INFO': 11,
+ 'memusage/max': 51920896,
+ 'memusage/startup': 51920896,
+ 'request_depth_max': 3,
+ 'response_received_count': 22,
+ 'scheduler/dequeued': 18,
+ 'scheduler/dequeued/memory': 18,
+ 'scheduler/enqueued': 18,
+ 'scheduler/enqueued/memory': 18,
+ 'start_time': datetime.datetime(2018, 4, 24, 13, 37, 50, 628991)}
+2018-04-24 21:38:14,798 Spider closed (finished)
+2018-04-24 21:38:16,122 Starting Phase 2: Payload Generation for SQL Injection attack
+2018-04-24 21:38:16,124 Retrieving payloads from SQLInjection.txt file
+2018-04-24 21:38:16,124 Completed Phase 2: Payload Generation for SQL Injection attack
+
+---------------------
+
+2018-04-24 21:38:16,137 Starting Phase 3: Payload Injection for SQL Injection attack
+
+2018-04-24 21:38:16,512 Starting Phase 2: Payload Generation for Server Side Code Injection attack
+2018-04-24 21:38:16,513 Retrieving payloads from ServerSideCodeInjection.txt file
+2018-04-24 21:38:16,513 Completed Phase 2: Payload Generation for Server Side Code Injection attack
+
+---------------------
+
+2018-04-24 21:38:16,513 Starting Phase 3: Payload Injection for Server Side Code Injection attack
+
+2018-04-24 21:38:16,842 Starting Phase 2: Payload Generation for Directory Traversal attack
+2018-04-24 21:38:16,842 Retrieving payloads from DirectoryTraversal.txt file
+2018-04-24 21:38:16,842 Completed Phase 2: Payload Generation for Directory Traversal attack
+
+---------------------
+
+2018-04-24 21:38:16,843 Starting Phase 3: Payload Injection for Directory Traversal attack
+
+2018-04-24 21:38:17,222 Starting Phase 2: Payload Generation for Cross Site Request Forgery attack
+2018-04-24 21:38:17,222 Retrieving payloads from CrossSiteRequestForgery.txt file
+2018-04-24 21:38:17,222 Completed Phase 2: Payload Generation for Cross Site Request Forgery attack
+
+---------------------
+
+2018-04-24 21:38:17,249 Starting Phase 3: Payload Injection for Cross Site Request Forgery attack
+
+2018-04-24 21:38:17,652 Starting Phase 2: Payload Generation for Open Redirect attack
+2018-04-24 21:38:17,652 Retrieving payloads from OpenRedirect.txt file
+2018-04-24 21:38:17,652 Completed Phase 2: Payload Generation for Open Redirect attack
+
+---------------------
+
+2018-04-24 21:38:17,653 Starting Phase 3: Payload Injection for Open Redirect attack
+
+2018-04-24 21:38:17,984 Starting Phase 2: Payload Generation for Shell Command Injection attack
+2018-04-24 21:38:17,984 Retrieving payloads from ShellCommandInjection.txt file
+2018-04-24 21:38:17,984 Completed Phase 2: Payload Generation for Shell Command Injection attack
+
+---------------------
+
+2018-04-24 21:38:17,984 Starting Phase 3: Payload Injection for Shell Command Injection attack
+
+2018-04-24 21:38:18,078 Starting Phase 4: Exploit Generation

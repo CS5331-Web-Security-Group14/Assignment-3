@@ -1,0 +1,63 @@
+[
+    {
+        "class" : "Directory Traversal",
+        "results" : {
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082" : [
+                {
+                    "endpoint" : "/file",
+                    "method" : "GET",
+                    "params" : {
+                        "filename" : "/etc/passwd"
+                    }
+                },
+            ]
+        }
+    },
+    {
+        "class" : "Open Redirect",
+        "results" : {
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080" : [
+                {
+                    "endpoint" : "/princess.php",
+                    "method" : "GET",
+                    "params" : {
+                        "target" : "https://status.github.com/messages"
+                    }
+                },
+            ],
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081" : [
+                {
+                    "endpoint" : "/secretclub.php",
+                    "method" : "GET",
+                    "params" : {
+                        "page" : "drinks#https://status.github.com/messages"
+                    }
+                },
+            ],
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082" : [
+                {
+                    "endpoint" : "/escape",
+                    "method" : "GET",
+                    "params" : {
+                        "target" : "https%3A%2F%2Fstatus.github.com/messages"
+                    }
+                },
+            ]
+        }
+    },
+    {
+        "class" : "CSRF",
+        "results" : {
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081" : [
+                {
+                    "endpoint" : "/secretclub.php?page=entertainment",
+                    "method" : "POST",
+                    "params" : {
+                        "movie" : "random",
+                        "csrftoken" : "bmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA="
+                    }
+                },
+            ]
+        }
+    }
+]

@@ -1,0 +1,61 @@
+{
+    "class": "Open Redirect", 
+    "results": {
+        "http://target.com": [
+            {
+                "endpoint": "/sqli/sqli.php", 
+                "method": "POST", 
+                "params": {
+                    "username": "https://status.github.com/messages"
+                }, 
+                "result": "<html>\n\n<body>\n<h1>User Directory</h1>\n\nSearch for user:\n<form id=\"directory\" method=\"POST\">\n    <input type=\"text\" name=\"username\" />\n    <input type=\"submit\" />\n</form>\nUser not found.\n</body>\n</html>\n", 
+                "success": false
+            }, 
+            {
+                "endpoint": "/serverside/serverside.php", 
+                "method": "GET", 
+                "params": {
+                    "page": "https://status.github.com/messages"
+                }, 
+                "result": "<html>\n<body>\n<h1>Server Side Code Injection</h1>\n</body>\n</html>\n", 
+                "success": false
+            }, 
+            {
+                "endpoint": "/openredirect/openredirect.php", 
+                "method": "GET", 
+                "params": {
+                    "redirect": "https://status.github.com/messages"
+                }, 
+                "result": "<!doctype html>\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <title>GitHub System Status</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">\n    <link rel=\"stylesheet\" href=\"/assets/application.css\" type=\"text/css\"/>\n    <link rel=\"alternate\" href=\"/messages.rss\" type=\"application/rss+xml\"/>\n    <link rel='icon' type='image/png' href='/images/status-icon-green.png'>\n    <link rel=\"alternate\" type=\"application/rss+xml\" title=\"GitHub Service Status\" href=\"/messages.rss\" />\n    <script src=\"/assets/application.js\"></script>\n  </head>\n  <body class=\"\">\n    <div id=\"header\" class=\"wrap\">\n      <h1 class=\"logo\"><a href=\"/\"><img src=\"/images/logo-good.png\" alt=\"github:status\" /></a></h1>\n\n\n      <h2 id=\"last_updated\">\n        Updated <abbr class=\"timeago\" title=\"2018-04-23T17:34:05Z\">2018-04-23T17:34:05Z</abbr>\n      </h2>\n    </div>\n\n    <div id=\"message-list\" class=\"wrap\" data-last-known-status=\"good\">\n  <div class=\"loader\"><img src=\"/images/spinner.gif\" /></div>\n  <div class=\"about\">\n    <h3>What is this site?</h3>\n    <p>We continuously monitor the status of <a href=\"https://github.com\">github.com</a> and all its related services. If there are any interruptions in service, a note will be posted here.</p>\n  </div>\n  <div class=\"messages-header\">\n    <h1>Status Messages</h1>\n  </div>\n    <div class=\"message_group\" id=\"2018-04-24\">\n      <h3>April 24, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-24T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n    <div class=\"message_group\" id=\"2018-04-23\">\n      <h3>April 23, 2018</h3>\n    \n        <div class=\"message good\" data-status=\"good\">\n          <time class=\"time\" datetime=\"2018-04-23T17:34:05+00:00\">17:34 UTC</time> <span class=\"title\">Everything operating normally.</span> \n        </div>\n        <div class=\"message minor\" data-status=\"minor\">\n          <time class=\"time\" datetime=\"2018-04-23T17:20:25+00:00\">17:20 UTC</time> <span class=\"title\">We've identified the cause of the dashboard timeouts and a fix is being rolled out.</span> \n        </div>\n        <div class=\"message minor\" data-status=\"minor\">\n          <time class=\"time\" datetime=\"2018-04-23T17:02:12+00:00\">17:02 UTC</time> <span class=\"title\">We're experiencing elevated error rates for user dashboards and are investigating.</span> \n        </div>\n    \n    </div>\n    <div class=\"message_group\" id=\"2018-04-22\">\n      <h3>April 22, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-22T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n    <div class=\"message_group\" id=\"2018-04-21\">\n      <h3>April 21, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-21T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n    <div class=\"message_group\" id=\"2018-04-20\">\n      <h3>April 20, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-20T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n    <div class=\"message_group\" id=\"2018-04-19\">\n      <h3>April 19, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-19T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n    <div class=\"message_group\" id=\"2018-04-18\">\n      <h3>April 18, 2018</h3>\n    \n    \n        <div class=\"message auto-message good\">\n          <time class=\"time\" datetime=\"2018-04-18T00:00:00+00:00\">00:00 UTC</time> <span class=\"title\">All systems reporting at 100%</span>\n        </div>\n    </div>\n  <div class=\"pagination\">\n      <span class=\"next disabled\">Next Week &raquo;</span>\n    <a href=\"/messages/2018-04-17\" class=\"prev\">&laquo; Previous Week</a>\n  </div>\n</div>\n\n\n    <div id=\"footer\" class=\"wrap\">\n      <div id=\"legal\">\n        <ul>\n          <li><a href=\"http://github.com/blog\">The GitHub Blog</a></li>\n          <li><a href=\"mailto:support@github.com\">Support</a></li>\n          <li><a href=\"https://github.com/contact\">Contact</a></li>\n          <li><a href=\"http://developer.github.com\">API</a></li>\n        </ul>\n        <p>\u00c2\u00a9 2018 GitHub Inc. All rights reserved.</p>\n      </div>\n      <div class=\"github\">\n        <a href=\"http://github.com\"><img src=\"/images/invertocat.png\" alt=\"GitHub.com\" /></a>\n      </div>\n    </div>\n  </body>\n</html>\n<!-- always remember that github loves you dearly -->\n", 
+                "success": true
+            }, 
+            {
+                "endpoint": "/directorytraversal/directorytraversal.php", 
+                "method": "GET", 
+                "params": {
+                    "ascii": "https://status.github.com/messages"
+                }, 
+                "result": "<html>\n\n<body>\nHere's your cat:\n\n<pre>\n</pre>\n</body>\n</html>\n", 
+                "success": false
+            }, 
+            {
+                "endpoint": "/commandinjection/commandinjection.php", 
+                "method": "POST", 
+                "params": {
+                    "host": "https://status.github.com/messages"
+                }, 
+                "result": "<html>\n<body>\nPing a Host\n\n<form id=\"rce\" method=\"POST\">\n    Hostname: <input type=\"text\" name=\"host\" value=\"google.com\" />\n    <input type=\"submit\" />\n</form>\n</body>\n</html>\n\n<pre></pre>", 
+                "success": false
+            }, 
+            {
+                "endpoint": "/csrf/csrf.php", 
+                "method": "POST", 
+                "params": {
+                    "secret": "https://status.github.com/messages"
+                }, 
+                "result": "<html>\n<head>\n\n<h1>Secret Messages</h1>\n\n<form method=\"POST\">\n    Message: <input type=\"text\" name=\"secret\" value=\"SECRET\" />\n    <input type=\"hidden\" name=\"csrftoken\" value=\"abcdef1235\" />\n    <input type=\"submit\" />\n</form>\n\nBad CSRF token.", 
+                "success": false
+            }
+        ]
+    }
+}

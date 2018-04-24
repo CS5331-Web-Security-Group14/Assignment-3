@@ -1,0 +1,92 @@
+{
+    "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080": [
+        {
+            "endpoint": "/"
+        }, 
+        {
+            "endpoint": "/about.php"
+        }, 
+        {
+            "endpoint": "/selections.php"
+        }, 
+        {
+            "endpoint": "/random.php"
+        }, 
+        {
+            "endpoint": "/adventure/"
+        }, 
+        {
+            "endpoint": "/selections.php", 
+            "method": "GET", 
+            "params": [
+                {
+                    "name": "artist"
+                }
+            ]
+        }, 
+        {
+            "endpoint": "/selections.php", 
+            "method": "GET", 
+            "params": [
+                {
+                    "name": "year"
+                }
+            ]
+        }
+    ], 
+    "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8081": [
+        {
+            "endpoint": "", 
+            "method": "post", 
+            "params": [
+                {
+                    "name": "username", 
+                    "type": "text", 
+                    "value": ""
+                }, 
+                {
+                    "name": "password", 
+                    "type": "text", 
+                    "value": ""
+                }, 
+                {
+                    "name": "", 
+                    "type": "submit", 
+                    "value": "Submit"
+                }
+            ]
+        }, 
+        {
+            "endpoint": "./index.txt"
+        }, 
+        {
+            "endpoint": "/index.txt", 
+            "method": "post", 
+            "params": [
+                {
+                    "name": "username", 
+                    "type": "text", 
+                    "value": ""
+                }, 
+                {
+                    "name": "password", 
+                    "type": "text", 
+                    "value": ""
+                }, 
+                {
+                    "name": "", 
+                    "type": "submit", 
+                    "value": "Submit"
+                }
+            ]
+        }, 
+        {
+            "endpoint": "/secretclub.php"
+        }, 
+        {
+            "endpoint": "/index.phps"
+        }
+    ], 
+    "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082": [], 
+    "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8083": []
+}

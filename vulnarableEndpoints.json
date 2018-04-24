@@ -59,5 +59,18 @@
                 },
             ]
         }
+    },
+    {
+        "class" : "Shell Command Injection",
+        "results" : {
+            "http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8082" : [
+                {
+                    "endpoint" : "/picturise/uname -a",
+                    "method" : "GET",
+                    "params": {
+                    }
+                },
+            ]
+        }
     }
 ]

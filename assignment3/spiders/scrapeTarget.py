@@ -12,7 +12,7 @@ import logging
 class ScrapeTarget(CrawlSpider):
 	name = "scrapeTarget"
 	start_urls = [
-		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080'
+		'http://ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080/'
 	]
 	allowed_domains =[
 		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com', ''

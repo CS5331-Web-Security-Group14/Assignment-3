@@ -43,7 +43,8 @@ class ScrapeTarget(CrawlSpider):
 		    for inp in inputs:
 			name = inp.xpath('@name').extract()
 			typ = inp.xpath('@type').extract()
-			inpJson = {'name': name[0] if len(name)>0 else '', 'type': typ[0] if len(typ)>0 else 'text'}
+			value = inp.xpath('@value').extract()
+			inpJson = {'name': name[0] if len(name)>0 else '', 'type': typ[0] if len(typ)>0 else 'text', 'value': value[0] if len(value) > 0 else ''}
 			formJson['params'].append(inpJson)
 		    if formJson not in self.injection_points[urlKey]:
 		    	self.injection_points[urlKey].append(formJson)

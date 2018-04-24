@@ -26,6 +26,9 @@ def is_attack_successful(attack_type, response, endpoint):
             success = True
     elif attack_type == SQL_INJECTION:
             success = False
+    elif attack_type == CSRF:
+        if 'Updated' in response['result']:
+            success = True
     else:
         success = False
 
@@ -65,11 +68,13 @@ def post_request(url, injection_point, payload):
             continue
         elif param['type'] == 'text':
             response['params'][param['name']] = payload
+        elif param['type'] == 'hidden':
+            response['params'][param['name']] = param['value']
     r = requests.post(urlparse.urljoin(url, injection_point['endpoint']), data=response['params'])
     response['result'] = r.text
     return response
             
-def get_request(attack_type, url,injection_point, payload):
+def get_request(attack_type, url, injection_point, payload):
     paramStr = '?'
     response = {'endpoint': injection_point['endpoint'], 'params': {}, 'method': 'GET'}
     for param in injection_point['params']:

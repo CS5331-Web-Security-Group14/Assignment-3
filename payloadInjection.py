@@ -110,7 +110,7 @@ def launch_attack(attack_type):
         json.dump(obj, fp, sort_keys=True, indent=4)
 
 def main():
-    logging.basicConfig(filename='logs.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
+    logging.basicConfig(filename='scanner_logs.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
     attack_type = sys.argv[1]
     launch_attack(attack_type)
     logging.info('Completed Phase 3: Payload Injection for {0}\n\n---------------------\n'.format(attack_type))

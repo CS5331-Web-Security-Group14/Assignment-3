@@ -12,10 +12,10 @@ import logging
 class ScrapeTarget(CrawlSpider):
 	name = "scrapeTarget"
 	start_urls = [
-		'http://target.com'
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com:8080'
 	]
 	allowed_domains =[
-		'target.com', ''
+		'ec2-13-250-106-60.ap-southeast-1.compute.amazonaws.com', ''
 	]
 	injection_points = {}
 	logging.basicConfig(filename='scanner_logs.log', format='%(asctime)s %(message)s', level=logging.DEBUG)
